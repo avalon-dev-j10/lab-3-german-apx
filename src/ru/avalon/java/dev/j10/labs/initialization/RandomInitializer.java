@@ -2,6 +2,8 @@ package ru.avalon.java.dev.j10.labs.initialization;
 
 import ru.avalon.java.dev.j10.labs.Initializer;
 
+import java.util.Random;
+
 /**
  * Инициализатор, выполняющий инициализацию массива
  * значениями последовательности случайных чисел.
@@ -22,6 +24,10 @@ public class RandomInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
+
+    for (int i = 0; i < array.length; i++) {
+        array[i] = (int) Math.round((Math.random()*100)-50);
+    }
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */

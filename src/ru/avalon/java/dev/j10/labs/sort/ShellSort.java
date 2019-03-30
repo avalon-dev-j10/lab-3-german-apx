@@ -20,9 +20,9 @@ public class ShellSort implements Sort {
     /**
      * {@inheritDoc}
      */
+
     public void sort(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод sort класса ShellSort
-         */
+
+
+        }
     }
-}

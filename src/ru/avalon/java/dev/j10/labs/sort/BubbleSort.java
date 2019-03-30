@@ -17,8 +17,24 @@ public class BubbleSort implements Sort {
      * {@inheritDoc}
      */
     public void sort(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод sort класса BubbleSort
-         */
+
+        // переменная для хранения значения, подлежащего перестановке
+        int temp;
+
+        // условие для выполнения цикла
+        boolean condition = true;
+
+        while (condition) {
+            condition = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                if(array[i] > array[i + 1]) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                    condition = true;
+                }
+            }
+        }
     }
+
 }
