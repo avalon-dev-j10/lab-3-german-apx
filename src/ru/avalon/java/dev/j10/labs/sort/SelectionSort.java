@@ -18,8 +18,20 @@ public class SelectionSort implements Sort {
      * {@inheritDoc}
      */
     public void sort(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод sort класса SelectionSort
-         */
+
+        // переменная для хранения значения, подлежащего перестановке
+        int temp;
+
+        for (int i = 0; i < array.length; i++) {
+            int k = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if(array[j] < array[k]) {
+                    k = j;
+                }
+            }
+            temp = array[i];
+            array[i] = array[k];
+            array[k] = temp;
+        }
     }
 }
