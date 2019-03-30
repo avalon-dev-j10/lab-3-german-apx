@@ -1,9 +1,30 @@
 package ru.avalon.java.dev.j10.labs;
+import ru.avalon.java.dev.j10.labs.initialization.*;
+import ru.avalon.java.dev.j10.labs.sort.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] array;
+        int[] arrayF = new int[19];
+		int[] arrayR = new int[19];
+
+	FibonacciInitializer fibonacciInitializer = new FibonacciInitializer();
+	fibonacciInitializer.initialize(arrayF);
+
+	System.out.println(" ");
+	ArrayMaker.printOut(arrayF);
+
+	int value = ArrayMaker.value(arrayF);
+
+	System.out.println(value);
+
+	RandomInitializer randomInitializer = new RandomInitializer();
+	randomInitializer.initialize(arrayR);
+
+	System.out.println(" ");
+	ArrayMaker.printOut(arrayR);
+
+
 
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
